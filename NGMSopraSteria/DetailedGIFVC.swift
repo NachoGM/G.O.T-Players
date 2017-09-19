@@ -7,7 +7,7 @@
 // 
 
 import UIKit
-
+ 
 class DetailedGIFVC: UIViewController {
 
     

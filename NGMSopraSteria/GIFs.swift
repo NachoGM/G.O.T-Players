@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import ImageIO
-
+ 
 extension UIImageView {
     
     public func loadGif(name: String) {

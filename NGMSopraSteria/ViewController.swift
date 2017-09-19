@@ -33,7 +33,7 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     // MARK: API Call HTTPMethod using GET  
      
     func downloadJson() {
-        
+         
         var request = URLRequest(url: URL(string: "http://api.giphy.com/v1/gifs/search?q=game+of+thrones&api_key=9ad9e8e5ad244f87bb73407487ba1254&limit=20")!)
         
         // "http://api.giphy.com/v1/gifs/search?q=game+of+thrones&api_key=9ad9e8e5ad244f87bb73407487ba1254&limit=20"
