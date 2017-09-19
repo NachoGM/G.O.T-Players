@@ -1,0 +1,6 @@
+framework module Pods_NGMSopraSteriaTests {
+  umbrella header "Pods-NGMSopraSteriaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
