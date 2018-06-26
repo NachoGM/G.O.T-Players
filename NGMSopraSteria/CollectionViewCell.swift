@@ -11,7 +11,7 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imgGIF: UIImageView!
-    @IBOutlet weak var gnomeName: UILabel!
-
+    @IBOutlet weak var gifView: UIView!
+    
 
 }

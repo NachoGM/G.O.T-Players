@@ -10,44 +10,37 @@ import UIKit
  
 class DetailedGIFVC: UIViewController {
 
-    
     var imageString:String!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-
         updateUI()
-        
+        configGIF()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    func configGIF() {
         let gifURL : String = imageString
         
         let imageURL = UIImage.gif(url: gifURL)
         
         let GIFView = UIImageView(image: imageURL)
-        GIFView.frame = CGRect(x: 20.0, y: 150, width: self.view.frame.size.width - 40, height: 150.0)
+        GIFView.frame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 69, width: self.view.frame.size.width, height:self.view.frame.size.width - 150.0)
         view.addSubview(GIFView)
     }
-
     
     func updateUI() {
-
         let imgURL = URL(string:imageString)
         _ = NSData(contentsOf: (imgURL)!)
-
     }
-    
-
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     
     @IBAction func backBtn(_ sender: Any) {
         
         _ = navigationController?.popViewController(animated: true)
-
     }
 
 }

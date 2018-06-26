@@ -19,6 +19,7 @@
 		6E2582001F253F2E00C1F8F5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2581FF1F253F2E00C1F8F5 /* CollectionViewCell.swift */; };
 		6E2582021F25405000C1F8F5 /* DetailedGIFVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2582011F25405000C1F8F5 /* DetailedGIFVC.swift */; };
 		6E2582071F255A7100C1F8F5 /* GIFs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2582061F255A7100C1F8F5 /* GIFs.swift */; };
+		BB455B7E20E2BF6A007E299F /* GOTPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB455B7D20E2BF6A007E299F /* GOTPlayers.swift */; };
 		F0A1BA8127686DA410B9B793 /* Pods_NGMSopraSteria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FBFC1C212BD60882320256 /* Pods_NGMSopraSteria.framework */; };
 		F761BA78471230C896FE0C41 /* Pods_NGMSopraSteriaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6CCDA2E9A54654DEBE42AC /* Pods_NGMSopraSteriaUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		70668CB683D931D3970EE047 /* Pods_NGMSopraSteriaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NGMSopraSteriaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A76076DF93136B7D01392D5 /* Pods-NGMSopraSteria.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NGMSopraSteria.release.xcconfig"; path = "Pods/Target Support Files/Pods-NGMSopraSteria/Pods-NGMSopraSteria.release.xcconfig"; sourceTree = "<group>"; };
 		7C3F6575D8828D85DF3251CE /* Pods-NGMSopraSteriaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NGMSopraSteriaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NGMSopraSteriaTests/Pods-NGMSopraSteriaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB455B7D20E2BF6A007E299F /* GOTPlayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTPlayers.swift; sourceTree = "<group>"; };
 		DC52D897BD838D506E6E6D17 /* Pods-NGMSopraSteriaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NGMSopraSteriaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NGMSopraSteriaUITests/Pods-NGMSopraSteriaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD6CCDA2E9A54654DEBE42AC /* Pods_NGMSopraSteriaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NGMSopraSteriaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,9 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				6E2581CE1F253DB500C1F8F5 /* AppDelegate.swift */,
-				6E25820B1F259F9B00C1F8F5 /* GIFHelper */,
-				6E2582031F25405800C1F8F5 /* Controllers */,
+				BB455B7F20E2C068007E299F /* Model */,
 				6E2582041F25406200C1F8F5 /* Views */,
+				6E2582031F25405800C1F8F5 /* Controllers */,
 				6E2582051F25407D00C1F8F5 /* Supporting Files */,
 			);
 			path = NGMSopraSteria;
@@ -161,7 +163,8 @@
 		6E2582041F25406200C1F8F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6E2581FF1F253F2E00C1F8F5 /* CollectionViewCell.swift */,
+				6E2581D21F253DB500C1F8F5 /* Main.storyboard */,
+				BB455B7C20E2BB97007E299F /* Cell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -169,11 +172,10 @@
 		6E2582051F25407D00C1F8F5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6E2581D21F253DB500C1F8F5 /* Main.storyboard */,
+				6E25820B1F259F9B00C1F8F5 /* GIFHelper */,
 				6E2581D81F253DB500C1F8F5 /* Assets.xcassets */,
 				6E2581DA1F253DB500C1F8F5 /* LaunchScreen.storyboard */,
 				6E2581DD1F253DB500C1F8F5 /* Info.plist */,
-				6E2581D51F253DB500C1F8F5 /* NGMSopraSteria.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -199,6 +201,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BB455B7C20E2BB97007E299F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6E2581FF1F253F2E00C1F8F5 /* CollectionViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		BB455B7F20E2C068007E299F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E2581D51F253DB500C1F8F5 /* NGMSopraSteria.xcdatamodeld */,
+				BB455B7D20E2BF6A007E299F /* GOTPlayers.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C925BAB0A1F9A98513558F23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,7 +240,6 @@
 				6E2581C81F253DB500C1F8F5 /* Frameworks */,
 				6E2581C91F253DB500C1F8F5 /* Resources */,
 				97124017911AED3BBD180324 /* [CP] Embed Pods Frameworks */,
-				6388A192253D68C6A493D936 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,8 +258,6 @@
 				6E2581DE1F253DB500C1F8F5 /* Sources */,
 				6E2581DF1F253DB500C1F8F5 /* Frameworks */,
 				6E2581E01F253DB500C1F8F5 /* Resources */,
-				C209DFCC839265B3BD3F49F1 /* [CP] Embed Pods Frameworks */,
-				31FA62582A159E26D1053EC7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,8 +277,6 @@
 				6E2581E91F253DB500C1F8F5 /* Sources */,
 				6E2581EA1F253DB500C1F8F5 /* Frameworks */,
 				6E2581EB1F253DB500C1F8F5 /* Resources */,
-				E14D3F507A0ABB63A2CDC9BD /* [CP] Embed Pods Frameworks */,
-				2CAA23DD9EDD2A7C77F105E8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -351,64 +365,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2CAA23DD9EDD2A7C77F105E8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NGMSopraSteriaUITests/Pods-NGMSopraSteriaUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		31FA62582A159E26D1053EC7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NGMSopraSteriaTests/Pods-NGMSopraSteriaTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		57D97A88764F0C962D2A7977 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NGMSopraSteria-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6388A192253D68C6A493D936 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NGMSopraSteria/Pods-NGMSopraSteria-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		92E8715EF40940C389BED6FE /* [CP] Check Pods Manifest.lock */ = {
@@ -417,13 +389,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NGMSopraSteriaTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97124017911AED3BBD180324 /* [CP] Embed Pods Frameworks */ = {
@@ -432,43 +407,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NGMSopraSteria/Pods-NGMSopraSteria-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NGMSopraSteria/Pods-NGMSopraSteria-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C209DFCC839265B3BD3F49F1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NGMSopraSteriaTests/Pods-NGMSopraSteriaTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E14D3F507A0ABB63A2CDC9BD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NGMSopraSteriaUITests/Pods-NGMSopraSteriaUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FDCBCDD6B4B065AC28DCADA2 /* [CP] Check Pods Manifest.lock */ = {
@@ -477,13 +425,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NGMSopraSteriaUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -498,6 +449,7 @@
 				6E2581D71F253DB500C1F8F5 /* NGMSopraSteria.xcdatamodeld in Sources */,
 				6E2581D11F253DB500C1F8F5 /* ViewController.swift in Sources */,
 				6E2582001F253F2E00C1F8F5 /* CollectionViewCell.swift in Sources */,
+				BB455B7E20E2BF6A007E299F /* GOTPlayers.swift in Sources */,
 				6E2581CF1F253DB500C1F8F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
